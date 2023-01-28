@@ -1,0 +1,8 @@
+<launch>
+     <node pkg = "map_server"
+           type = "map_server"
+           name = "map_server"
+           output = "screen"
+           args = "$(find amr_mapping)/maps/mechanical_workshop_map.yaml">
+     </node>
+</launch>

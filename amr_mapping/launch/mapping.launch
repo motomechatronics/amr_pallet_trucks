@@ -1,0 +1,7 @@
+<launch>     
+     <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
+     <rosparam file="$(find amr_mapping)/params/mapping_params.yaml" command="load"/> \
+     <remap from="/scan" to="/front_scan" />
+      
+  </node>
+</launch>
