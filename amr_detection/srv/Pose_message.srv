@@ -1,0 +1,6 @@
+
+---
+geometry_msgs/Pose pose           # pose between the odom link and europallet center frame
+geometry_msgs/Pose pose_shifted   # pose between the odom link and europallet center shifted frame
+string output                     # informations
+bool success                      # it indicates success

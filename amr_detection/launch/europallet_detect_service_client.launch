@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="amr_detection"
+          type="europallet_detector_client.py"
+          name="europallet_detector_client_node"
+          output="screen">
+    </node>
+</launch>
