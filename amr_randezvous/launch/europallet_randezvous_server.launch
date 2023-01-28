@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="amr_randezvous"
+          type="europallet_randezvous_server.py"
+          name="ranzezvous_service_node"
+          output="screen">
+    </node>
+</launch>
