@@ -77,6 +77,10 @@ export NVM_DIR="/home/user/catkin_ws/src/amr_pallet_trucks/amr_webpage/nvm"
 press esc and save
 ```
 source ~/.bashrc
+nvm ls
+nvm install v14
+nvm alias default v14
+npm install -g http-server
  ```
  
 [go to top](#amr_pallet_trucks-project)
