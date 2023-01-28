@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="amr_disengagement"
+          type="europallet_disengagement_server.py"
+          name="disengagement_service_node"
+          output="screen">
+    </node>
+</launch>
