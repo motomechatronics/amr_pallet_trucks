@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="cnc_milling_small">
+    <link name="link">
+      <inertial>
+        <mass>2</mass>
+        <inertia>
+          <ixx>0.277</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.452</iyy>
+          <iyz>0</iyz>
+          <izz>0.268</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+         <pose frame='link'>0 -0.5 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2 2 2</size>
+          </box>  
+        </geometry>
+		<surface>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+        </friction>
+          </surface>
+      </collision>
+      <visual name="visual">
+	    <geometry>
+          <mesh>
+            <uri>model://cncmillingsmall_model/meshes/VF-1_STEP_11_2021_low.dae</uri>
+          </mesh>
+        </geometry>
+      <meta> <layer> 1 </layer></meta>
+</visual>
+    </link>
+<static>1</static>
+  </model>
+</sdf>

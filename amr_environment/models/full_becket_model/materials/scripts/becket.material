@@ -1,0 +1,29 @@
+material becket_model/Diffuse
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture EuroPallet_Wood.jpg
+				
+			}
+		}
+	}
+}
+
+material becket_model/Diffuse2
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{				
+				texture metal_chips.jpg
+                container_texture.jpg
+			}
+		}
+	}
+}

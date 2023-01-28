@@ -1,0 +1,14 @@
+material becket_model/Diffuse
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture EuroPallet_Wood.jpg
+			}
+		}
+	}
+}
+
