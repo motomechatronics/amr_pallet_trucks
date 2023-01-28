@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="amr_description"
+          type="elevator_service_server.py"
+          name="elevator_service_server_node"
+          output="screen">
+    </node>
+</launch>

@@ -1,0 +1,3 @@
+string elevator   # use "up" or "down" 
+---
+bool success      # task reached

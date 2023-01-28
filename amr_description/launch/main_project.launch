@@ -1,0 +1,34 @@
+<launch>
+   
+    <!--start rosbridge websocket-->
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+        <arg name="port" value="9090" />
+        <arg name="websocket_external_port" value="$(env SLOT_ROSBRIDGE_PORT)" />
+    </include>
+    
+    <!--spawn amr in the Gazebo company environment -->
+    <include file="$(find amr_description)/launch/spawn_main_amr_warehouse.launch"/>
+
+    <!--visualize amr in the Rviz'environment Rviz-->
+    <include file="$(find amr_navigation)/launch/amr_urdf_visualize.launch"/>
+
+    <!--launch navigation stack and the go_to_point server-->
+    <include file="$(find amr_navigation)/launch/main.launch"/>
+
+    <!--launch the europallet detection server-->
+    <include file="$(find amr_detection)/launch/europallet_detect_service_server.launch"/>  
+
+    <!--launch the fork elevator server-->
+    <include file="$(find amr_description)/launch/elevator_service_server.launch"/>  
+
+    <!--launch europallet randezvous server-->
+    <include file="$(find amr_randezvous)/launch/europallet_randezvous_server.launch"/>  
+
+    <!--launch europallet disengagement server-->
+    <include file="$(find amr_disengagement)/launch/europallet_disengagement_server.launch"/>  
+
+
+</launch>
+
+
+

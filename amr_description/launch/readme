@@ -1,0 +1,212 @@
+to visualize in rviz
+roslaunch amr_description amr_urdf_visualize.launch
+
+to visualize in gazebo
+roslaunch amr_description spawn_main_amr_warehouse.launch
+or
+roslaunch amr_description spawn_main_amr_empty_world.launch
+
+### mapping ###
+roslaunch amr_description spawn_main_amr_warehouse.launch
+roslaunch amr_mapping mapping.launch 2> >(grep -v TF_REPEATED_DATA buffer_core)
+roslaunch amr_description amr_urdf_visualize.launch
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+cd ~/catkin_ws/src/amr_mapping/maps
+rosrun map_server map_saver -f mechanical_workshop_map
+
+### localization ###
+roslaunch amr_description spawn_main_amr_warehouse.launch
+roslaunch amr_localization map_warehouse_service_server.launch
+roslaunch amr_localization amcl.launch
+roslaunch amr_description amr_urdf_visualize.launch
+
+to save the mission_pose
+roslaunch amr_localization record_poi_server.launch
+
+### navigation ###
+roslaunch amr_description spawn_main_amr_warehouse.launch
+roslaunch amr_navigation navigation.launch
+roslaunch amr_navigation amr_urdf_visualize.launch
+
+### navigation with mission database ###
+roslaunch amr_description spawn_main_amr_warehouse.launch
+roslaunch amr_navigation main.launch 2> >(grep -v TF_REPEATED_DATA buffer_core)
+roslaunch amr_navigation amr_urdf_visualize.launch 2> >(grep -v TF_REPEATED_DATA buffer_core)
+roslaunch amr_description rosbridge.launch
+roslaunch amr_detection europallet_detect_service_server.launch
+
+# final project ###
+roslaunch amr_description main_project.launch 2> >(grep -v TF_REPEATED_DATA buffer_core)
+roslaunch amr_navigation amr_urdf_visualize.launch 2> >(grep -v TF_REPEATED_DATA buffer_core)
+cd ~/webpage_ws/
+http-server --port 7000
+webpage_address
+rosbridge_address
+
+terminal to save positions 
+rosrun amr_localization record_poi_server.py
+
+terminal to reach a position use:
+rosservice call /go_to_point tab-tab
+
+terminal to launch detection map_server
+roslaunch amr_detection europallet_detect_service_server.launch 2> >(grep -v TF_REPEATED_DATA buffer_core)
+
+terminal call server europallet service
+rosservice call /europallet_detector_server "{}"
+or
+roslaunch amr_detection europallet_detect_service_client.launch
+or 
+rosrun amr_randezvous europallet_randezvous.py 
+
+terminal # START all
+roslaunch amr_description main_project.launch
+
+termimnal
+rosrun amr_randezvous moved_pose.py 
+
+terminal to publish europallet tf
+rosrun amr_navigation europallet_detection.py 2> >(grep -v TF_REPEATED_DATA buffer_core)
+
+terminal 2
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+
+cd robot
+xacro gurdy.xacro > gurdy_gen.urdf
+# Let's check the contents of the gurdy.urdf
+cat gurdy_gen.urdf
+
+to verify
+xacro gurdy.xacro > tmp.urdf && check_urdf tmp.urdf && rm tmp.urdf
+
+
+
+Parameters Customization
+initial_pose_x: -0.38
+initial_pose_y: -1.40
+initial_pose_a: 0
+resolution: 0.01
+inflation_radius: 0.1
+footprint: [[-0.25, -0.25], [-0.25, 0.25], [0.25, 0.25], [0.25, -0.25]]
+xy_goal_tolerance: 0.4
+
+### elevator server ###
+roslaunch amr_description elevator_service_server.launch
+rosservice call /elevator_service_server "elevator: 'up'"
+rosservice call /elevator_service_server "elevator: 'down'"
+
+git commands:
+
+add submodule
+git add submodule url name
+git submodule update --init
+
+to delete a .git repo folder
+rm -rf .git
+
+git  organizes the files in three groups:
+working directory contains:
+- untracked files
+- modified files
+
+staging area:
+-staged file (those that need to be moved to the repository that is committed)
+
+local repository 
+- commited files
+
+Note: Git terms, a repository refers to the collection of files that Git keeps track of.
+Despite being located inside the project folder, "Untracked files" are not part of a Git repository.
+
+terminal
+Configuring git
+git config --global user.name "Salvatore Volpe"
+git config --global user.email "salvatore.volpe@mtmt.it"
+Every project you want to put under version control with Git
+will be organized in a Git repository:
+Inside a package, type:
+git Init 
+
+To display any modifications in your Git project files, run the following:
+git status
+
+To select the files you want to stage, use the following command:
+git add  # to move the files from untracked to change to be committed
+git add . # to move all the files at the same time
+
+To record a new version of the project, run the git commit command:
+git commit -m "write a note"
+The history of a software project is nothing other than the sequence of commits of a repository.
+
+git status
+
+The output of git log will be a list of commits that shows how a software project has evolved.
+git log 
+or 
+git log --oneline
+
+With Git, you can visualize the exact code changes line by line using the following command:
+git diff
+git diff --staged
+
+
+Note, when the git diff or git log output is too long to fit on your screen, scroll up and down with the arrow keys and exit typing q.
+
+c) Now, stage that file and run the same git diff command again.
+Execute in WebShell #1
+
+git add launch/virtual_track.launch
+
+git diff
+
+This will show no output because the file is now in the staging area.
+
+d) Display the diff information for the staged changes by including the --staged option.
+Execute in WebShell #1
+
+git diff --staged
+
+Expected result:
+
+In summary, use git diff to see what changes are still
+unstaged and git diff --staged to see what changes have been 
+staged.
+
+
+git commit --amend # to change the same last commit. If you want make changes only on the code and to mantain the
+                   # same commit message use git commit --amend --no-edit
+
+git commit --amend --no-edit
+
+To move around in a project's Git timeline, use the git checkout command.
+git checkout (provide the commit ID for the commit you want to move back to)
+git checkout HEAD~1
+This will restore the project to one commit previous. 
+git checkout HEAD~2 will go back two commits and so on.
+
+To return to the latest version of the project, where you can continue to work, run the following:
+git checkout master
+
+
+git log master..basic-user-interface
+git diff master..basic-user-interface
+
+rename a branch
+git branch -m <old_branch_name> <new_branch_name>
+
+git merge <branch_name> 
+
+git branch # list all the branches
+git branch <branch name>  # set new branches
+git switch <branch_name>
+
+- to put under version control an entire project with different packages, it needs use git init at level of catkin_ws
+- eliminate the version control of a package delete the .git folder with rm -rf .git
+
+git remote add origin https://github.com/motomechatronics/amr_pallet_trucks.git
+git branch -M main
+git push -u origin main
+##
+Username: motomechatronics
+Password: your_personal_access_token
+##

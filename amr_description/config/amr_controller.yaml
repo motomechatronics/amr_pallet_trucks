@@ -1,0 +1,19 @@
+amr:
+    # Publish all joint states -----------------------------------
+    joint_state_controller:
+      type: joint_state_controller/JointStateController
+      publish_rate: 50
+
+    # Forks Position Controllers ---------------------------------------
+    base_link_elevator_sx_link_joint_position_controller:
+      type: effort_controllers/JointPositionController
+      joint: base_link_elevator_sx_link_joint
+      pid: {p: 100000.0, i: 100.0, d: 100}       
+
+    # Forks Position Controllers ---------------------------------------
+    base_link_elevator_dx_link_joint_position_controller:
+      type: effort_controllers/JointPositionController
+      joint: base_link_elevator_dx_link_joint
+      pid: {p: 100000.0, i: 100.0, d: 100}
+
+

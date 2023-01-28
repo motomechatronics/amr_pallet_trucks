@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+ <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find gazebo_ros)/worlds/empty.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+   <include file="$(find amr_description)/launch/amr_joints_control.launch"/>
+
+
+  <!-- Robot model -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find amr_description)/urdf/amr.xacro'" />
+
+  <!-- Spawn the robot model -->
+  <node name="movil" pkg="gazebo_ros" type="spawn_model" output="screen" 
+        args="-urdf -x -5.3 -y 6.2 -z 0.2 -model amr -param robot_description" />
+
+</launch>
+
+
+
+
+ 
