@@ -58,6 +58,10 @@ Open a terminal and type
 ```
 cd ~/catkin_ws/src
 git clone https://github.com/motomechatronics/amr_pallet_trucks.git
+cd ..
+catkin_make
+source devel/setup.bash
+
 ```
 [go to top](#amr_pallet_trucks-project)
 ### 3. Usage
