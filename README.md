@@ -57,6 +57,7 @@ Open a terminal and type
 
 ```
 cd ~/catkin_ws/src
+git clone 
 ```
 [go to top](#amr_pallet_trucks-project)
 ### 3. Usage
