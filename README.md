@@ -68,13 +68,15 @@ roslaunch amr_description main_project.launch
 Open another terminal
 ```
 cd ~/catkin_ws/src/amr_webpage
-http-server --port 7000
+~/catkin_ws/src/amr_webpage/$ http-server --port 7000
 ```
 Open another terminal
 ```
 webpage_address
 rosbridge_address
 ```
+Clink on the link and copy and paste the string into 
+
 The web interface shown in figure 3.1 allows to command the AMR. In particular, using it is possible to substitute, at the moment, only one chip bin.
 
 <p align="center">
