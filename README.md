@@ -61,6 +61,20 @@ git clone https://github.com/motomechatronics/amr_pallet_trucks.git
 ```
 [go to top](#amr_pallet_trucks-project)
 ### 3. Usage
+Open a terminal and type
+```
+roslaunch amr_description main_project.launch
+```
+Open another terminal
+```
+cd ~/catkin_ws/src/amr_webpage
+http-server --port 7000
+```
+Open another terminal
+```
+webpage_address
+rosbridge_address
+```
 The web interface shown in figure 3.1 allows to command the AMR. In particular, using it is possible to substitute, at the moment, only one chip bin.
 
 <p align="center">
