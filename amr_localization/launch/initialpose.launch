@@ -1,0 +1,8 @@
+<launch>
+     <node pkg = "amr_localization"
+           type = "amr_initialpose.py"
+           name = "amr_initialpose_node"
+           output = "screen">
+           
+     </node>
+</launch>

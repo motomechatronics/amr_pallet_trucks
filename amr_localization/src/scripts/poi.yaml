@@ -1,0 +1,80 @@
+trash_big_01: # position near full chip bin for big cnc machine no.1
+  orientation:
+    w: 0.7406259848739181
+    x: 0.0
+    y: 0.0
+    z: 0.6719175176534237
+  position:
+    x: 4.748182789748335
+    y: 0.45738011576504867
+    z: 0.0
+recycling_area: # area in which it leaves the full chip bin for recycling
+  orientation:
+    w: 0.0
+    x: 0.0
+    y: 0.0
+    z: 1.0
+  position:
+    x: 3.0
+    y: -6.7
+    z: 0.0
+trash_small_01: # position near full chip bin for small cnc machine no.1
+  orientation:
+    w: 0.007516664014511831
+    x: 0.0
+    y: 0.0
+    z: -0.9999717494820006
+  position:
+    x: -4.85701765186008
+    y: -6.489678961389937
+    z: 0.0
+trash_small_02: # position near full chip bin for small cnc machine no.2
+  orientation:
+    w: 0.057690497975307814
+    x: 0.0
+    y: 0.0
+    z: -0.9983345163037092
+  position:
+    x: -4.767844964695563
+    y: -1.32654602078207
+    z: 0.0
+trash_small_03: # position near full chip bin for small cnc machine no.3
+  orientation:
+    w: 0.0
+    x: 0.0
+    y: 0.0
+    z: 1.0
+  position:
+    x: -4.6
+    y: 5.7013525655476995
+    z: 0.0
+home: # home position
+  orientation:
+    w: 0.707
+    x: 0.0
+    y: 0.0
+    z: -0.707
+  position:
+    x: -4.6
+    y: 8.0
+    z: 0.0
+load_area_bin_2: # load area of empty chip bin no. 2
+  orientation:
+    w: 0.0
+    x: 0.0
+    y: 0.0
+    z: 1.0
+  position:
+    x: 2.5
+    y: -4.0
+    z: 0.0
+download_area_bin_2: # download area of empty chip bin no. 2 (cnc machine)
+  orientation:
+    w: 0.0
+    x: 0.0
+    y: 0.0
+    z: 1.0
+  position:  
+    x: -1.76
+    y: 5.70
+    z: 0.0

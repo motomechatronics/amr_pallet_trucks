@@ -1,0 +1,3 @@
+string label # may be the label of the position or the "end" command to save the pose
+---
+string output # indicate the file poi.yaml saved

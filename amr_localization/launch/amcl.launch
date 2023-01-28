@@ -1,0 +1,12 @@
+<launch>
+   <include file="$(find amr_localization)/launch/initialpose.launch" />
+  <arg name="use_map_topic" default="true"/>
+  <arg name="scan_topic" default="front_scan" />
+
+    <node pkg="amcl" type="amcl" name="amcl">
+        <rosparam file="$(find amr_localization)/params/amr_localization_params.yaml" command="load"/> 
+        <remap from="/scan" to="/front_scan" />
+    </node>
+     
+
+</launch>

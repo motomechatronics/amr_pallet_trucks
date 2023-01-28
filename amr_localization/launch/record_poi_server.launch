@@ -1,0 +1,7 @@
+<launch>
+    <node pkg = "amr_localization"
+          type = "record_poi_server.py"
+          name = "save_poi_service_server_node"
+          output = "screen">
+    </node>
+</launch>
