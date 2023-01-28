@@ -1,0 +1,45 @@
+<html>
+
+<head>
+	<!-- React stuff -->
+	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<!-- ROSlib.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/roslibjs/1.1.0/roslib.min.js" type="text/javascript"></script>
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<title>AMR Pallet Truck: Chip Bin Manager Control Panel</title>
+</head>
+
+<body>
+	<div id="app">
+		Loading...
+	</div>
+
+	<!-- React components -->
+	<script src="components/ros_panel.js" type="text/babel"></script>
+	<script src="components/actions/goto_full_chip_bin.js" type="text/babel"></script>
+	<script src="components/actions/goto_empty_chip_bin.js" type="text/babel"></script>
+	<script src="components/actions/goto_cnc_machine.js" type="text/babel"></script>
+    <script src="components/actions/go_home.js" type="text/babel"></script>
+    <script src="components/actions/elevator_up_chip_bin.js" type="text/babel"></script>
+    <script src="components/actions/elevator_down_chip_bin.js" type="text/babel"></script>
+    <script src="components/actions/move_chip_bin_to_recycling.js" type="text/babel"></script> 
+    <script src="components/actions/disengagement_chip_bin.js" type="text/babel"></script>
+	<script src="components/actions/manual_control.js" type="text/babel"></script>
+	<script src="components/actions/randez_vous_chip_bin.js" type="text/babel"></script>
+    <script src="components/actions/recycling_bin.js" type="text/babel"></script>
+	<script src="components/sensors/laser.js" type="text/babel"></script>
+	<script src="components/sensors/odometry.js" type="text/babel"></script>
+	<script src="components/header.js" type="text/babel"></script>
+	<script src="components/footer.js" type="text/babel"></script>
+	<script src="app.js" type="text/babel"></script>
+
+<!-- This is the change --> 
+
+</body>
+
+</html>
