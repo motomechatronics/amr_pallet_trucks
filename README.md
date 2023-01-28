@@ -68,13 +68,17 @@ Open another terminal
 ```
 vim ~/.bashrc
 ```
-At the end of the file, copy and paste:
+At the end of the file, (press i) copy and paste:
 ```
 export NVM_DIR="/home/user/catkin_ws/src/amr_pallet_trucks/amr_webpage/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 ```
-
+press esc and
+```
+source ~/.bashrc
+ ```
+ 
 [go to top](#amr_pallet_trucks-project)
 ### 3. Usage
 Open a terminal and type
