@@ -61,8 +61,20 @@ git clone https://github.com/motomechatronics/amr_pallet_trucks.git
 cd ..
 catkin_make
 source devel/setup.bash
+export NVM_DIR="/home/user/catkin_ws/src/amr_pallet_trucks/webpage_ws/nvm"
 
 ```
+Open another terminal
+```
+vim ~/.bashrc
+```
+At the end of the file, copy and paste:
+```
+export NVM_DIR="/home/user/catkin_ws/src/amr_pallet_trucks/amr_webpage/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+```
+
 [go to top](#amr_pallet_trucks-project)
 ### 3. Usage
 Open a terminal and type
