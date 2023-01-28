@@ -1,0 +1,9 @@
+global_frame: map
+rolling_window: false
+static_map: true
+
+plugins:
+
+  - {name: static,                  type: "costmap_2d::StaticLayer"} # Used to initialize the costmap from a static map.
+  - {name: obstacles_laser,         type: "costmap_2d::VoxelLayer"} # Used to add the obstacle sees from laser to the static map
+  - {name: inflation,               type: "costmap_2d::InflationLayer"} #  Used to inflate obstacles.

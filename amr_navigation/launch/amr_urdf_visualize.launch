@@ -1,0 +1,18 @@
+<launch>
+
+    <!-- USE: roslaunch my_mira_description urdf_visualize.launch model:='$(find myrobot_package)/urdf/myrobot.urdf' -->
+    <arg name="model" default="'$(find amr_description)/urdf/amr.xacro'"/>
+
+    <param name="robot_description" command="$(find xacro)/xacro '$(find amr_description)/urdf/amr.xacro'" />
+    
+    <!-- send fake joint values -->
+    <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"/>  
+   
+    <!-- Combine joint values  -->
+    <node name="robot_state_publishe2" pkg="robot_state_publisher" type="robot_state_publisher"/>  
+
+    <!-- Show in Rviz   -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find amr_navigation)/rviz_config/rviz_config.rviz"/> 
+
+ 
+</launch>

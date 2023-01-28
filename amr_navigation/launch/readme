@@ -1,0 +1,26 @@
+Parameters Customization
+initial_pose_x: -0.38
+initial_pose_y: -1.40
+initial_pose_a: 0
+resolution: 0.01
+inflation_radius: 0.1
+footprint: [[-0.25, -0.25], [-0.25, 0.25], [0.25, 0.25], [0.25, -0.25]]
+xy_goal_tolerance: 0.4
+
+terminal 1
+source ~/simulation_ws/devel/setup.bash
+roslaunch rb1_base_gazebo warehouse_rb1.launch
+
+terminal 2
+source ~/simulation_ws/devel/setup.bash
+roslaunch rb1_navigation main.launch 
+
+terminal 2
+source ~/simulation_ws/devel/setup.bash
+rosrun rviz rviz
+load configuration> rb1_navigation.rviz
+
+terminal 3
+rosservice call /go_to_point "label: 'loading_position'"
+rosservice call /go_to_point "label: 'init_position'"
+

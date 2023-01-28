@@ -1,0 +1,12 @@
+global_frame: odom
+rolling_window: true
+
+inflation:
+    inflation_radius: 0.85 #  The radius in meters to which the map inflates obstacle cost values.
+    cost_scaling_factor: 10 # A scaling factor to apply to cost values during inflation.
+  
+plugins:
+  - {name: obstacles_laser,           type: "costmap_2d::ObstacleLayer"} 
+  - {name: inflation,                 type: "costmap_2d::InflationLayer"}
+
+  

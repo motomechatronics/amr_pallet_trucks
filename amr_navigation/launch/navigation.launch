@@ -1,0 +1,43 @@
+<launch>
+
+  <arg name="no_static_map" default="false"/>
+
+    <arg name="base_global_planner" default="navfn/NavfnROS"/>  -->
+  <!-- <arg name="base_global_planner" default="global_planner/GlobalPlanner"/> -->
+  <arg name="base_local_planner" default="dwa_local_planner/DWAPlannerROS"/> 
+   <!--arg name="base_local_planner" default="base_local_planner/TrajectoryPlannerROS"/--> 
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+
+    <param name="base_global_planner" value="$(arg base_global_planner)"/>
+    <param name="base_local_planner" value="$(arg base_local_planner)"/>
+    <rosparam file="$(find amr_navigation)/params/amr_move_base_params.yaml" command="load"/>
+
+    <!-- observation sources located in costmap_common.yaml -->
+    <rosparam file="$(find amr_navigation)/config/costmap_common.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find amr_navigation)/config/costmap_common.yaml" command="load" ns="local_costmap" />
+
+    <!-- local costmap, needs size -->
+    <rosparam file="$(find amr_navigation)/config/costmap_local.yaml" command="load" ns="local_costmap" />
+    <param name="local_costmap/width" value="10.0"/>
+    <param name="local_costmap/height" value="10.0"/>
+
+    <!-- static global costmap, static map provides size -->
+    <rosparam file="$(find amr_navigation)/config/costmap_global_static.yaml" command="load" ns="global_costmap" unless="$(arg no_static_map)"/>
+
+    <!-- global costmap with laser, for odom_navigation_demo  -->
+    <rosparam file="$(find amr_navigation)/config/costmap_global_laser.yaml" command="load" ns="global_costmap" if="$(arg no_static_map)"/>
+    <param name="global_costmap/width" value="100.0" if="$(arg no_static_map)"/>
+    <param name="global_costmap/height" value="100.0" if="$(arg no_static_map)"/>
+    <remap from="/cmd_vel" to="/cmd_vel" /> 
+  </node>
+
+    <!-- Run the map server -->
+  <arg name="map_file" default="$(find amr_mapping)/maps/mechanical_workshop_map.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+  <!--- Run AMCL -->
+  <include file="$(find amr_localization)/launch/amcl.launch" />
+
+
+</launch>

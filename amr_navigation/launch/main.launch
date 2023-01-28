@@ -1,0 +1,10 @@
+<launch> 
+<rosparam command="load" file="$(find amr_localization)/src/scripts/poi.yaml"/>
+<include file = "$(find amr_navigation)/launch/navigation.launch"/>
+
+<node pkg ="amr_navigation"
+      type = "main_navigation.py"
+      name = "main_navigation_node"
+      output = "screen">
+</node>
+</launch> 
