@@ -64,7 +64,7 @@ source devel/setup.bash
 export NVM_DIR="/home/user/catkin_ws/src/amr_pallet_trucks/webpage_ws/nvm"
 
 ```
-Next, always in the same termina, use **vim**, **gedit**, or ...
+Next, always in the same terminal, use **vim**, **gedit**, or ...
 ```
 vim ~/.bashrc
 ```
