@@ -116,7 +116,7 @@ You will get an alphanumeric string, copy and paste the string into the web inte
 Figure 3.1: Web Interface. Buttons: (1) go to full bin, (2) fork the bin, (3) elevator up, (4) go to recycling, (5) elevator down, (6) disengagement bin, (7) recycling bin, (8) go to empty bin, (9) go to CNC machine, (10) go home, (11) move forward, (12) move backward, (13) move turn CW, (14) move turn CCW, (15) stop, (16) connect/disconnect. Readings: (17) odometry position, (18) obstacle distances.
 </h4>
 
-At the moment the project manages only one chip bin. The procedure to stage a substitution cycle is the following:
+At the moment the project manages only one bin, not selectable. The procedure to stage a substitution cycle is the following:
 - pressing **go to full bin** button, the expected result is shown in figure 3.2.
 
 <p align="center">
