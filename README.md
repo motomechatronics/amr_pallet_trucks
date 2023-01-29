@@ -96,7 +96,7 @@ roslaunch amr_description main_project.launch
 Open another terminal
 ```
 cd ~/catkin_ws/src/amr_webpage
-~/catkin_ws/src/amr_webpage/$ http-server --port 7000
+http-server --port 7000
 ```
 Open another terminal
 ```
