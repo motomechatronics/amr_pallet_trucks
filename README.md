@@ -135,10 +135,10 @@ after that,
 </p>
 
 <h4 align="center">
-Figure 3.3: result pressing the fork the bin and elevator up buttons.
+Figure 3.3: result pressing the fork the bin and the elevator up buttons.
 </h4>
 
-- pressing **go to recycling** button and next the **elevator down** button, the expected result is shown in figure 3.4.
+- press **go to recycling** button and next the **elevator down** button, the expected result is shown in figure 3.4.
 
 <p align="center">
 <img src="docs/move to recycling area lift down full bin.gif" width="700" />
