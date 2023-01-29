@@ -18,7 +18,7 @@ The following project refers to a smart factory in which the IoT, the advanced c
 Figure 1.1: Mechanical workshop environment. (1) AMR pallet trucks, (2) CNC machine, (3) full chip bin, (4) empty chip bin.
 </h4>
 
-In the following scenario, it staged an example of management of the residual metal chip bin by the AMR pallet truck using a web interface, as shown in figure 1.2. It leaves the fully automatic management to a later implementation.
+In the following scenario, it is staged an example of management of the residual metal chip bin by the AMR pallet truck using a web interface, as shown in figure 1.2. It leaves the fully automatic management to a later implementation.
 
 <p align="center">
 <img src="docs/webinterface.png" width="700" />
