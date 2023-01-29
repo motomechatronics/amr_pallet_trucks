@@ -34,7 +34,7 @@ The project, created using ROS Noetic and Python language, has been divided into
  - navigation 
  - usage
 
-The first part concerns the construction of the AMR and its environment, i.e. the mechanical workshop with CNC machines and the chip bins. The second one is dealing with the actions of the AMR, like: the detection, the engagement and the disengagement of the chip bin. The third regards the transport of both empty and full europallets. The last one is an explanation how to do a chip bin replacement cycle using a web interface. To achive these objectives  9 packages were created, grouped as follows:
+The first part concerns the construction of the AMR and its environment, i.e. the mechanical workshop with CNC machines and the chip bins. The second one is dealing with the actions of the AMR, like: the detection, the engagement and the disengagement of the chip bin. The third regards the transport of both empty and full europallets. The last one is an explanation on how to do a chip bin replacement cycle using a web interface. To achive these objectives  9 packages were created, grouped as follows:
 
  - **Gazebo simulation** 
      - amr_description
