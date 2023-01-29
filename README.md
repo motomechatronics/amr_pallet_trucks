@@ -78,6 +78,7 @@ press esc and save typing inside **vim** environment
 ```
 :wq!
 ```
+In the same terminal
 ```
 source ~/.bashrc
 nvm ls
