@@ -101,11 +101,12 @@ cd ~/catkin_ws/src/amr_webpage
 Open another terminal
 ```
 webpage_address
+```
+you will get a web link. Copy and paste the link in a browser or clink on the link. After in the same terminal tyoe
+```
 rosbridge_address
 ```
-Clink on the link and copy and paste the string into 
-
-The web interface shown in figure 3.1 allows to command the AMR. In particular, using it is possible to substitute, at the moment, only one chip bin.
+You will get an alphanumeric string, copy and paste the string into the web interface shown in figure 3.1.
 
 <p align="center">
 <img src="docs/webinterface.png" width="700" />
