@@ -8,7 +8,7 @@
 
 The four industrial revolution (4IR) pushes the manufacturing industry to an integration with newest technologies like the Artificial Intelligence, additive manufacturing, augmented reality and the IoT internet of things. The 4IR also includes an advanced in connectivity between machines, robots, sensors, etc. that gives rise to “smart factories”.
 
-The following project refers to a smart factory in which the IoT, the advanced connectivity and the ROS technology allow an autonomous management of the raw and waste materials. In particular, the environment, shown in the figure 1.1, reproduces a mechanical workshop for working metals with numerical control machines where an AMR pallet truck ensures the handling of both raw or semi-finished pieces and the transport of residual metal shaving.
+The following project refers to a smart factory in which the IoT, the advanced connectivity and the ROS technology allow an autonomous management of the raw and waste materials. In particular, the environment, shown in the figure 1.1, reproduces a mechanical workshop for working metals with numerical control machines, where an AMR pallet truck ensures the handling of both raw or semi-finished pieces and the transport of residual metal shaving.
 
 <p align="center">
 <img src="docs/mechanical_workshop.png" width="700" />
