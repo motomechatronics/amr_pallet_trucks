@@ -117,7 +117,7 @@ Figure 3.1: Web Interface. Buttons: (1) go to full bin, (2) fork the bin, (3) el
 </h4>
 
 At the moment the project manages only one bin, not selectable. The procedure to stage a substitution cycle is the following:
-- press **go to full bin** button, the expected result is shown in figure 3.2.
+- press the **go to full bin** button, the expected result is shown in figure 3.2.
 
 <p align="center">
 <img src="docs/approch_full_bin2.gif" width="700" />
@@ -128,7 +128,7 @@ Figure 3.2: result pressing the go to full bin button.
 </h4>
 
 after that, 
-- press **fork the bin** button and next the **elevator up** button, the expected result is shown in figure 3.3.
+- press the **fork the bin** button and next the **elevator up** button, the expected result is shown in figure 3.3.
 
 <p align="center">
 <img src="docs/fork and lift full bin.gif" width="700" />
@@ -138,17 +138,17 @@ after that,
 Figure 3.3: result pressing the fork the bin and the elevator up buttons.
 </h4>
 
-- press **go to recycling** button and next the **elevator down** button, the expected result is shown in figure 3.4.
+- press the **go to recycling** button and next the **elevator down** button, the expected result is shown in figure 3.4.
 
 <p align="center">
 <img src="docs/move to recycling area lift down full bin.gif" width="700" />
 </p>
 
 <h4 align="center">
-Figure 3.4: result pressing the go to recycling and elevator down buttons.
+Figure 3.4: result pressing the go to recycling and the elevator down buttons.
 </h4>
 
-- press **disengagement** button and when the AMR will be disengaged press **recycling bin** and **go to empty bin** buttons. The expected result is shown in figure 3.5.
+- press the **disengagement** button and when the AMR will be disengaged press the **recycling bin** and the **go to empty bin** buttons. The expected result is shown in figure 3.5.
 
 <p align="center">
 <img src="docs/disengagement and go to load empty bin.gif" width="700" />
