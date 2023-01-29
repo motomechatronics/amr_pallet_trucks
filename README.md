@@ -95,7 +95,7 @@ roslaunch amr_description main_project.launch
 ```
 Open another terminal
 ```
-cd ~/catkin_ws/src/amr_webpage
+cd catkin_ws/src/amr_pallet_trucks/amr_webpage/
 http-server --port 7000
 ```
 Open another terminal
