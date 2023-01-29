@@ -148,17 +148,17 @@ Figure 3.3: result pressing the fork the bin and the elevator up buttons.
 Figure 3.4: result pressing the go to recycling and the elevator down buttons.
 </h4>
 
-- press the **disengagement** button and when the AMR will be disengaged press the **recycling bin** and the **go to empty bin** buttons. The expected result is shown in figure 3.5.
+- press the **disengagement** button and when the AMR will be disengaged, press the **recycling bin** and the **go to empty bin** buttons. The expected result is shown in figure 3.5.
 
 <p align="center">
 <img src="docs/disengagement and go to load empty bin.gif" width="700" />
 </p>
 
 <h4 align="center">
-Figure 3.5: result pressing disengagement bin, recycling bin and go to empty bin buttons.
+Figure 3.5: result pressing the disengagement bin, the recycling bin and the go to empty bin buttons.
 </h4>
 
-- pressing **fork the bin** button, the expected result is shown in figure 3.6.
+- press the **fork the bin** button, the expected result is shown in figure 3.6.
 
 <p align="center">
 <img src="docs/fork empty bin and lift up.gif" width="700" />
@@ -168,17 +168,17 @@ Figure 3.5: result pressing disengagement bin, recycling bin and go to empty bin
 Figure 3.6: result pressing the go to empty bin button.
 </h4>
 
-- pressing **go to cnc machine** button and next the **elevator down** button, the expected result is shown in figure 3.7.
+- press the **go to cnc machine** button and next the **elevator down** button, the expected result is shown in figure 3.7.
 
 <p align="center">
 <img src="docs/go to cnc machine and lift down empty bin.gif" width="700" />
 </p>
 
 <h4 align="center">
-Figure 3.7: result pressing the go to cnc machine and elevator down buttons.
+Figure 3.7: result pressing the go to cnc machine and the elevator down buttons.
 </h4>
 
-- pressing **disengagement** and **go home** buttons the cycle ends. The expected result is shown in figure 3.8.
+- by pressing the **disengagement** and the **go home** buttons the cycle ends. The expected result is shown in figure 3.8.
 
 <p align="center">
 <img src="docs/disengagement empty bin and go home.gif" width="700" />
