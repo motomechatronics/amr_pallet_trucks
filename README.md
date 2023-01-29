@@ -102,7 +102,7 @@ Open another terminal and type
 ```
 webpage_address
 ```
-you will get a web link. Copy and paste the link in a browser or clink on the link. After in the same terminal type
+You will get a web link. Copy and paste the link in a browser or clink on the link. After in the same terminal type
 ```
 rosbridge_address
 ```
