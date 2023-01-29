@@ -117,7 +117,7 @@ Figure 3.1: Web Interface. Buttons: (1) go to full bin, (2) fork the bin, (3) el
 </h4>
 
 At the moment the project manages only one bin, not selectable. The procedure to stage a substitution cycle is the following:
-- pressing **go to full bin** button, the expected result is shown in figure 3.2.
+- press **go to full bin** button, the expected result is shown in figure 3.2.
 
 <p align="center">
 <img src="docs/approch_full_bin2.gif" width="700" />
@@ -128,7 +128,7 @@ Figure 3.2: result pressing the go to full bin button.
 </h4>
 
 after that, 
-- pressing **fork the bin** button and next the **elevator up** button, the expected result is shown in figure 3.3.
+- press **fork the bin** button and next the **elevator up** button, the expected result is shown in figure 3.3.
 
 <p align="center">
 <img src="docs/fork and lift full bin.gif" width="700" />
