@@ -93,12 +93,12 @@ Open a terminal and type
 ```
 roslaunch amr_description main_project.launch
 ```
-Open another terminal
+Open another terminal and type
 ```
 cd catkin_ws/src/amr_pallet_trucks/amr_webpage/
 http-server --port 7000
 ```
-Open another terminal
+Open another terminal and type
 ```
 webpage_address
 ```
