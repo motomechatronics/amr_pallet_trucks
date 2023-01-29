@@ -102,11 +102,11 @@ Open another terminal
 ```
 webpage_address
 ```
-you will get a web link. Copy and paste the link in a browser or clink on the link. After in the same terminal tyoe
+you will get a web link. Copy and paste the link in a browser or clink on the link. After in the same terminal type
 ```
 rosbridge_address
 ```
-You will get an alphanumeric string, copy and paste the string into the web interface shown in figure 3.1.
+You will get an alphanumeric string, copy and paste the string into the web interface shown in figure 3.1 and press the **connect** button.
 
 <p align="center">
 <img src="docs/webinterface.png" width="700" />
