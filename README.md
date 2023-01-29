@@ -124,7 +124,7 @@ At the moment the project manages only one bin, not selectable. The procedure to
 </p>
 
 <h4 align="center">
-Figure 3.2: result pressing the go to full bin button.
+Figure 3.2: result of pressing the go to full bin button.
 </h4>
 
 after that, 
@@ -135,7 +135,7 @@ after that,
 </p>
 
 <h4 align="center">
-Figure 3.3: result pressing the fork the bin and the elevator up buttons.
+Figure 3.3: result of pressing the fork the bin and the elevator up buttons.
 </h4>
 
 - press the **go to recycling** button and next the **elevator down** button, the expected result is shown in figure 3.4.
@@ -145,7 +145,7 @@ Figure 3.3: result pressing the fork the bin and the elevator up buttons.
 </p>
 
 <h4 align="center">
-Figure 3.4: result pressing the go to recycling and the elevator down buttons.
+Figure 3.4: result of pressing the go to recycling and the elevator down buttons.
 </h4>
 
 - press the **disengagement** button and when the AMR will be disengaged, press the **recycling bin** and the **go to empty bin** buttons. The expected result is shown in figure 3.5.
@@ -155,7 +155,7 @@ Figure 3.4: result pressing the go to recycling and the elevator down buttons.
 </p>
 
 <h4 align="center">
-Figure 3.5: result pressing the disengagement bin, the recycling bin and the go to empty bin buttons.
+Figure 3.5: result of pressing the disengagement bin, the recycling bin and the go to empty bin buttons.
 </h4>
 
 - press the **fork the bin** button, the expected result is shown in figure 3.6.
@@ -165,7 +165,7 @@ Figure 3.5: result pressing the disengagement bin, the recycling bin and the go 
 </p>
 
 <h4 align="center">
-Figure 3.6: result pressing the go to empty bin button.
+Figure 3.6: result of pressing the go to empty bin button.
 </h4>
 
 - press the **go to cnc machine** button and next the **elevator down** button, the expected result is shown in figure 3.7.
@@ -175,7 +175,7 @@ Figure 3.6: result pressing the go to empty bin button.
 </p>
 
 <h4 align="center">
-Figure 3.7: result pressing the go to cnc machine and the elevator down buttons.
+Figure 3.7: result of pressing the go to cnc machine and the elevator down buttons.
 </h4>
 
 - by pressing the **disengagement** and the **go home** buttons the cycle ends. The expected result is shown in figure 3.8.
@@ -185,7 +185,7 @@ Figure 3.7: result pressing the go to cnc machine and the elevator down buttons.
 </p>
 
 <h4 align="center">
-Figure 3.8: result pressing the disengagement and the go home buttons.
+Figure 3.8: result of pressing the disengagement and the go home buttons.
 </h4>
 
 [go to top](#amr_pallet_trucks-project)
