@@ -74,7 +74,10 @@ export NVM_DIR="/home/user/catkin_ws/src/amr_pallet_trucks/amr_webpage/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 ```
-press esc and save
+press esc and save typing inside **vim** environemnt
+```
+:wq!
+```
 ```
 source ~/.bashrc
 nvm ls
