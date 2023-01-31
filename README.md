@@ -60,6 +60,7 @@ Install the navigation and the rosbridge suite packages.
 sudo apt-get update
 sudo apt-get install ros-noetic-navigation
 sudo apt-get install ros-noetic-rosbridge-suite
+sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
 sudo ln -s /usr/bin/python3 /usr/bin/python
 ```
 Open a terminal and type
