@@ -1,6 +1,3 @@
-<!-- Salvatore AMR -->
-
-
 <launch>
   <!-- Load joint controller configurations from YAML file to parameter server -->
   <rosparam file="$(find amr_description)/config/amr_controller.yaml" command="load"/>
