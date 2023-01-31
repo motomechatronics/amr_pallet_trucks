@@ -106,6 +106,8 @@ npm install -g http-server
 ### 3. Usage
 Open a terminal and type
 ```
+cd catkin_ws
+source devel/setup.bash
 roslaunch amr_description main_project.launch
 ```
 Open another terminal and type
