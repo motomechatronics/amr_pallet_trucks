@@ -106,13 +106,13 @@ npm install -g http-server
 ### 3. Usage
 Open a terminal and type
 ```
-cd catkin_ws
+cd ~/catkin_ws
 source devel/setup.bash
 roslaunch amr_description main_project.launch
 ```
 Open another terminal and type
 ```
-cd catkin_ws/src/amr_pallet_trucks/amr_webpage/
+cd ~/catkin_ws/src/amr_pallet_trucks/amr_webpage/
 http-server --port 7000
 ```
 Open another terminal and type
