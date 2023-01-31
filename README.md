@@ -82,7 +82,7 @@ Comment this line and save the file.
 ```
 <!--arg name="websocket_external_port" value="$(env SLOT_ROSBRIDGE_PORT)" /-->
 ```
-Next, always in the same terminal, use **vim**, **gedit**, or ...
+Next, edit the .bashrc file
 ```
 vim ~/.bashrc
 ```
