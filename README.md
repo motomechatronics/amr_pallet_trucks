@@ -60,6 +60,7 @@ Install the navigation and the rosbridge suite packages.
 sudo apt-get update
 sudo apt-get install ros-noetic-navigation
 sudo apt-get install ros-noetic-rosbridge-suite
+sudo ln -s /usr/bin/python3 /usr/bin/python
 ```
 Open a terminal and type
 
@@ -116,11 +117,11 @@ Open another terminal and type
 ```
 webpage_address
 ```
-You will get a web link. Copy and paste the link in a browser or clink on the link. After in the same terminal type
+You will get a web link as http://127.0.0.1:7000. Copy and paste the link in a browser. After in the same terminal type
 ```
 rosbridge_address
 ```
-You will get an alphanumeric string, copy and paste the string into the web interface shown in figure 3.1 and press the **connect** button.
+You will get a link as ws://127.0.0.1:9090, copy and paste the string into the rosbrigde address field, shown in figure 3.1 and press the **connect** button.
 
 <p align="center">
 <img src="docs/webinterface.png" width="700" />
