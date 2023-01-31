@@ -78,9 +78,15 @@ vim ~/.bashrc
 ```
 At the end of the file, (press i) copy and paste:
 ```
-export NVM_DIR="/home/user/catkin_ws/src/amr_pallet_trucks/amr_webpage/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
+source /opt/ros/noetic/setup.bash
+source /usr/share/gazebo/setup.sh
+export GAZEBO_RESOURCE_PATH=usr/share/gazebo-11/models:$HOME/catkin_ws/src/amr_pallet_trucks:$HOME/catkin_ws/src/amr_pallet_trucks/amr_environment/models:$HOME/catkin_ws/src/amr_pallet_trucks/amr_environment
+export GAZEBO_MODEL_PATH=/usr/share/gazebo-11/models:$HOME/catkin_ws/src/amr_pallet_trucks:$HOME/catkin_ws/src/amr_pallet_trucks/amr_environment/models:$HOME/catkin_ws/src/amr_pallet_trucks/amr_environment
+export NVM_DIR="$HOME/catkin_ws/src/amr_pallet_trucks/amr_webpage/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias webpage_address='echo http://127.0.0.1:7000'
+alias rosbridge_address='echo ws://127.0.0.1:9090'
 ```
 press esc and save typing inside **vim** environment
 ```
