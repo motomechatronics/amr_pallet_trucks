@@ -53,6 +53,14 @@ The first part concerns the construction of the AMR and its environment, i.e. th
 [go to top](#amr_pallet_trucks-project)
 
 ### 2. Installation
+The AMR_pallet_trucks project runs at least on UBUNTU 20.04 LTS and ROS Noetic. Refers to https://ubuntu.com/download/desktop and  https://wiki.ros.org/noetic/Installation/Ubuntu to install them.
+
+Install the navigation and the rosbridge suite packages.
+```
+sudo apt-get update
+sudo apt-get install ros-noetic-navigation
+sudo apt-get install ros-noetic-rosbridge-suite
+```
 Open a terminal and type
 
 ```
