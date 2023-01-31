@@ -73,6 +73,15 @@ source devel/setup.bash
 export NVM_DIR="/home/user/catkin_ws/src/amr_pallet_trucks/webpage_ws/nvm"
 
 ```
+Edit main_project.launch file, with
+```
+cd ~/catkin_ws/src/amr_pallet_trucks/amr_description/launch
+vim main_project.lauch
+```
+Comment this line and save the file.
+```
+<!--arg name="websocket_external_port" value="$(env SLOT_ROSBRIDGE_PORT)" /-->
+```
 Next, always in the same terminal, use **vim**, **gedit**, or ...
 ```
 vim ~/.bashrc
