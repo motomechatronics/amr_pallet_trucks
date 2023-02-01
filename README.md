@@ -185,7 +185,7 @@ Figure 3.4: result of pressing the go to recycling and the elevator down buttons
 Figure 3.5: result of pressing the disengagement bin, the recycling bin and the go to empty bin buttons.
 </h4>
 
-- press the **fork the bin** button and, when the chip bin is forked, press **elevator up button**. The expected result is shown in figure 3.6.
+- press the **fork the bin** button and, when the chip bin is forked, press **elevator up** button. The expected result is shown in figure 3.6.
 
 <p align="center">
 <img src="docs/fork empty bin and lift up.gif" width="700" />
