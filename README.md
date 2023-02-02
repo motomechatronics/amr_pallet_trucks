@@ -113,6 +113,11 @@ npm install -g http-server
  ```
 
 #### Run the project in a Docker Container
+In the case you have UBUNTU installed in your PC, type
+```
+cd ~/catkin_ws/src
+git clone https://github.com/motomechatronics/amr_pallet_trucks.git
+```
 Install Docker if it is not present in your system, typing
 ```
 sudo apt-get update
@@ -152,7 +157,8 @@ Open another terminal and type:
 ```
 sudo docker ps
 ```
-CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAMES
+CONTAINER ID       IMAGE     COMMAND   CREATED         STATUS         PORTS     NAMES
+
 **3e31851e18ad**  amr_ptp    "bash"    7 minutes ago   Up 7 minutes             naughty_wiles
 ```
 sudo docker exec -it 3e31851e18ad  bash
@@ -161,7 +167,7 @@ Now, you can explore the project, for example you can visualize the /front_scan 
 ```
 rostopic echo /front_scan
 ```
-Or you can visualize the list of the topic or of the servers:
+Or you can visualize the list of the topics or of the servers:
 ```
 rostopic list
 rosservice list
