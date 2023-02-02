@@ -111,7 +111,61 @@ nvm install v14
 nvm alias default v14
 npm install -g http-server
  ```
- 
+
+#### Run the project in a Docker Container
+Install Docker if it is not present in your system, typing
+```
+sudo apt-get update
+sudo apt-get install docker.io docker-compose
+sudo service docker start
+```
+Then you can already work with Docker (with sudo):
+```
+sudo docker ps
+sudo docker images
+```
+To create an image of the projet, open a terminal and type:
+```
+cd ~/catkin_ws/src/amr_pallet_trucks/
+sudo docker build -f dockerfile_amr_pallet_trucks_project -t amr_ptp:latest .
+```
+After that, run the image in the container, typing:
+```
+sudo docker run -it amr_ptp
+```
+Now, you should be inside the UBUNTU system like root. Type:
+```
+source devel/setup.bash
+vim src/amr_pallet_trucks/amr_description/launch/main_project.launch 
+```
+Press i letter and comment the line as follow:
+```
+<!--arg name="websocket_external_port" value="$(env SLOT_ROSBRIDGE_PORT)" /-->
+```
+press esc, type :wq! and press enter.
+
+Launch the project with:
+```
+roslaunch amr_description main_project.launch
+```
+Open another terminal and type:
+```
+sudo docker ps
+```
+CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAMES
+**3e31851e18ad**  amr_ptp    "bash"    7 minutes ago   Up 7 minutes             naughty_wiles
+```
+sudo docker exec -it 3e31851e18ad  bash
+```
+Now, you can explore the project, for example you can visualize the /front_scan topic, with:
+```
+rostopic echo /front_scan
+```
+Or you can visualize the list of the topic or of the servers:
+```
+rostopic list
+rosservice list
+```
 [go to top](#amr_pallet_trucks-project)
 ### 3. Usage
 Open a terminal and type

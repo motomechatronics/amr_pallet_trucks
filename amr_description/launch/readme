@@ -127,6 +127,9 @@ will be organized in a Git repository:
 Inside a package, type:
 git Init 
 
+# unstaged akk
+git reset
+
 To display any modifications in your Git project files, run the following:
 git status
 
@@ -210,3 +213,6 @@ git push -u origin main
 Username: motomechatronics
 Password: your_personal_access_token
 ##
+
+# to see what push after commit
+git diff HEAD^ HEAD 
