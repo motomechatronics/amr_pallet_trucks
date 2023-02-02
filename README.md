@@ -2,8 +2,8 @@
 ## Table of Contents
 - [1. Overview](#1-overview)
 - [2. Installation](#2-installation)
-    - [2.1 Run on PC](#2.1-Run-on-PC)
-    - [2.2 Run on Docker Container](#2.2-Run-on-Docker-Container)
+    - [2.1 Run on PC](#2-1-run-on-PC)
+    - [2.2 Run on Docker Container](#2-2-Run-on-Docker-Container)
 - [3. Usage](#3-usage)
 
 ### 1. Overview
