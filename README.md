@@ -1,11 +1,12 @@
 # amr_pallet_trucks project
 ## Table of Contents
-- [1. Overview](#1-overview)
-- [2. Installation](#2-installation)
-    - 2.1 [Run on PC](#run-on-PC)
-    - 2.2 [Run on Docker Container](#run-on-docker-container)
-- [3. Usage](#3-usage)
+- [1. Overview](#heading--1)
+- [2. Installation](#heading--2)
+    - 2.1 [Run on PC](#heading--2-1)
+    - 2.2 [Run on Docker Container](#heading--2-2)
+- [3. Usage](#heading--3)
 
+<div id="heading--1"/>
 ### 1. Overview
 The four industrial revolution (4IR) pushes the manufacturing industry to an integration with newest technologies like the Artificial Intelligence, additive manufacturing, augmented reality and the IoT internet of things. The 4IR also includes an advanced in connectivity between machines, robots, sensors, etc. that gives rise to “smart factories”.
 
@@ -53,7 +54,9 @@ The first part concerns the construction of the AMR and its environment, i.e. th
  
 [go to top](#amr_pallet_trucks-project)
 
+<div id="heading--2"/>
 ### 2. Installation
+<div id="heading--2-1"/>
 ### 2.1 Run on PC
 The AMR_pallet_trucks project runs at least on UBUNTU 20.04 LTS and ROS Noetic. Refer to https://ubuntu.com/download/desktop and  https://wiki.ros.org/noetic/Installation/Ubuntu to install them.
 
@@ -113,7 +116,7 @@ nvm install v14
 nvm alias default v14
 npm install -g http-server
  ```
-
+<div id="heading--2-2"/>
 ### 2.2 Run on Docker Container
 In the case you have UBUNTU installed in your PC, type
 ```
@@ -173,6 +176,8 @@ rostopic list
 rosservice list
 ```
 [go to top](#amr_pallet_trucks-project)
+
+<div id="heading--3"/>
 ### 3. Usage
 Open a terminal and type
 ```
