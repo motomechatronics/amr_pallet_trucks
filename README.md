@@ -157,9 +157,7 @@ Open another terminal and type:
 ```
 sudo docker ps
 ```
-CONTAINER ID       IMAGE     COMMAND   CREATED         STATUS         PORTS     NAMES
-
-**3e31851e18ad**  amr_ptp    "bash"    7 minutes ago   Up 7 minutes             naughty_wiles
+You will get a list of the containers. Copy and paste the **container ID** of the image **amr_ptp** as below:   
 ```
 sudo docker exec -it 3e31851e18ad  bash
 ```
