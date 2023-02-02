@@ -2,6 +2,8 @@
 ## Table of Contents
 - [1. Overview](#1-overview)
 - [2. Installation](#2-installation)
+    - [2.1 Run on PC](#2.1-Run-on-PC)
+    - [2.2 Run on Docker Container](#2.2-Run-on-Docker-Container)
 - [3. Usage](#3-usage)
 
 ### 1. Overview
@@ -53,6 +55,7 @@ The first part concerns the construction of the AMR and its environment, i.e. th
 [go to top](#amr_pallet_trucks-project)
 
 ### 2. Installation
+### 2.1 Run on PC
 The AMR_pallet_trucks project runs at least on UBUNTU 20.04 LTS and ROS Noetic. Refer to https://ubuntu.com/download/desktop and  https://wiki.ros.org/noetic/Installation/Ubuntu to install them.
 
 Install the following packages:
@@ -112,7 +115,7 @@ nvm alias default v14
 npm install -g http-server
  ```
 
-#### Run the project in a Docker Container
+### 2.2 Run on Docker Container
 In the case you have UBUNTU installed in your PC, type
 ```
 cd ~/catkin_ws/src
