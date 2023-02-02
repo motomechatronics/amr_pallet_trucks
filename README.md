@@ -58,6 +58,7 @@ The first part concerns the construction of the AMR and its environment, i.e. th
 <div id="heading--2"/>
 
 ### 2. Installation
+
 <div id="heading--2-1"/>
 
 ### 2.1 Run on PC
@@ -119,8 +120,10 @@ nvm install v14
 nvm alias default v14
 npm install -g http-server
  ```
- ### 2.2 Run on Docker Container
 <div id="heading--2-2"/>
+
+### 2.2 Run on Docker Container
+
 In the case you have UBUNTU installed in your PC, type
 ```
 cd ~/catkin_ws/src
