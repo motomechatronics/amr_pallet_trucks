@@ -1,0 +1,62 @@
+FROM nvidia/cudagl:11.1.1-base-ubuntu20.04
+
+# Minimal setup
+RUN apt-get update \
+ && apt-get install -y locales lsb-release
+ARG DEBIAN_FRONTEND=noninteractive
+RUN dpkg-reconfigure locales
+
+# Install ROS Noetic
+RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+RUN apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends ros-noetic-desktop-full \
+ && apt-get install -y --no-install-recommends ros-noetic-navigation \
+ && apt-get install -y --no-install-recommends ros-noetic-rosbridge-suite \
+ && apt-get install -y --no-install-recommends ros-noetic-ros-control ros-noetic-ros-controllers
+RUN apt-get install -y --no-install-recommends python3-rosdep
+RUN rosdep init \
+ && rosdep fix-permissions \
+ && rosdep update
+ 
+ # Change the default shell to Bash
+SHELL [ "/bin/bash" , "-c" ]
+
+# Install Git
+RUN apt-get update && apt-get install -y git && apt-get install -y build-essential
+
+# Create a Catkin workspace and clone amr_pallet_trucks from gitbub
+RUN source /opt/ros/noetic/setup.bash \
+ && mkdir -p /home/moto/catkin_ws/src \
+ && cd /home/moto/catkin_ws/src \
+ && catkin_init_workspace \
+ && git clone https://github.com/motomechatronics/amr_pallet_trucks.git \
+ && apt-get install -y --no-install-recommends vim
+ 
+# Build the Catkin workspace, sourced and compiled.
+RUN source /opt/ros/noetic/setup.bash \
+ && cd /home/moto/catkin_ws \
+ && catkin_make
+
+RUN source /home/moto/catkin_ws/devel/setup.bash
+# Set the working folder at startup
+WORKDIR /home/moto/catkin_ws
+RUN apt-get install curl
+RUN cd /home/moto/catkin_ws/src/amr_pallet_trucks/amr_webpage
+#RUN mkdir -pv nvm 
+RUN export NVM_DIR="/home/moto/catkin_ws/src/amr_pallet_trucks/amr_webpage/nvm"
+RUN export PATH=${NVM_DIR}/v14/bin:${PATH}
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash 
+
+RUN sudo ln -s /usr/bin/python3 /usr/bin/python
+RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+RUN echo "source /usr/share/gazebo/setup.sh" >> ~/.bashrc
+RUN echo "export GAZEBO_RESOURCE_PATH=usr/share/gazebo-11/models:$HOME/catkin_ws/src/amr_pallet_trucks:$HOME/catkin_ws/src/amr_pallet_trucks/amr_environment/models:$HOME/catkin_ws/src/amr_pallet_trucks/amr_environment" >> ~/.bashrc
+RUN echo "export GAZEBO_MODEL_PATH=/usr/share/gazebo-11/models:$HOME/catkin_ws/src/amr_pallet_trucks:$HOME/catkin_ws/src/amr_pallet_trucks/amr_environment/models:$HOME/catkin_ws/src/amr_pallet_trucks/amr_environment" >> ~/.bashrc
+RUN echo "export NVM_DIR="$HOME/catkin_ws/src/amr_pallet_trucks/amr_webpage/nvm"" >> ~/.bashrc
+
+RUN echo "[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"" >> ~/.bashrc
+RUN echo "[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"" >> ~/.bashrc
+RUN echo "alias webpage_address='echo http://127.0.0.1:7000'" >> ~/.bashrc
+RUN echo "alias rosbridge_address='echo ws://127.0.0.1:9090'" >> ~/.bashrc
+RUN source ~/.bashrc
