@@ -120,6 +120,8 @@ nvm install v14
 nvm alias default v14
 npm install -g http-server
  ```
+[go to top](#amr_pallet_trucks-project)
+ 
 <div id="heading--2-2"/>
 
 ### 2.2 Run on Docker Container
