@@ -6,8 +6,9 @@
     - [2.2 Run on Docker Container](#heading--2-2)
 - [3. Usage](#heading--3)
 
-### 1. Overview
 <div id="heading--1"/>
+
+### 1. Overview
 The four industrial revolution (4IR) pushes the manufacturing industry to an integration with newest technologies like the Artificial Intelligence, additive manufacturing, augmented reality and the IoT internet of things. The 4IR also includes an advanced in connectivity between machines, robots, sensors, etc. that gives rise to “smart factories”.
 
 The following project refers to a smart factory in which the IoT, the advanced connectivity and the ROS technology allow an autonomous management of the raw and waste materials. In particular, the environment, shown in the figure 1.1, reproduces a mechanical workshop for working metals with numerical control machines, where an AMR pallet truck ensures the handling of both raw or semi-finished pieces and the transport of residual metal shaving.
@@ -54,12 +55,12 @@ The first part concerns the construction of the AMR and its environment, i.e. th
  
 [go to top](#amr_pallet_trucks-project)
 
-### 2. Installation
 <div id="heading--2"/>
 
-### 2.1 Run on PC
+### 2. Installation
 <div id="heading--2-1"/>
 
+### 2.1 Run on PC
 The AMR_pallet_trucks project runs at least on UBUNTU 20.04 LTS and ROS Noetic. Refer to https://ubuntu.com/download/desktop and  https://wiki.ros.org/noetic/Installation/Ubuntu to install them.
 
 Install the following packages:
@@ -179,24 +180,32 @@ rosservice list
 ```
 [go to top](#amr_pallet_trucks-project)
 
-### 3. Usage
 <div id="heading--3"/>
+
+### 3. Usage
 Open a terminal and type
+
 ```
 cd ~/catkin_ws
 source devel/setup.bash
 roslaunch amr_description main_project.launch
 ```
+
 Open another terminal and type
+
 ```
 cd ~/catkin_ws/src/amr_pallet_trucks/amr_webpage/
 http-server --port 7000
 ```
+
 Open another terminal and type
+
 ```
 webpage_address
 ```
+
 You will get a web link as http://127.0.0.1:7000. Copy and paste the link in a browser. After in the same terminal type
+
 ```
 rosbridge_address
 ```
