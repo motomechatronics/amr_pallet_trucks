@@ -303,5 +303,6 @@ Figure 3.8: result of pressing the disengagement and the go home buttons.
 ### 4. Design
 work in progress...
 <p align="center">
-<img src="docs/mechanical_workshop.png" width="700" />
+<img src="docs/design_pallet_truck.png" width="700" />
 </p>
+[go to top](#amr_pallet_trucks-project)
