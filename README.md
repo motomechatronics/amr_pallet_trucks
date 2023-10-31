@@ -302,7 +302,7 @@ Figure 3.8: result of pressing the disengagement and the go home buttons.
 <div id="heading--4"/>
     
 ### 4. Design
-we are designing the real pallet truck. We will update you on the work in progress. The images below show you a simple implementation.
+We are designing the real pallet truck. We will update you on the work in progress. The images below show you a simple implementation.
 
 <p align="center">
 <img src="docs/design_pallet_truck.png" width="700" />
