@@ -308,4 +308,9 @@ work in progress...
 <img src="docs/design_pallet_truck.png" width="700" />
 </p>
 
+
+<p align="center">
+<img src="docs/design_pallet_truck_2.png" width="700" />
+</p>
+
 [go to top](#amr_pallet_trucks-project)
