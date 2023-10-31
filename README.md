@@ -327,4 +327,5 @@ Figure 4.2: view of the fork mechanism with the fork up.
 <h4 align="center">
 Figure 4.3: view of the fork mechanism with the fork down.
 </h4>
+
 [go to top](#amr_pallet_trucks-project)
