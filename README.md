@@ -5,6 +5,7 @@
     - [2.1 Run on PC](#heading--2-1)
     - [2.2 Run on Docker Container](#heading--2-2)
 - [3. Usage](#heading--3)
+- [4. Design](#heading--4)
 
 <div id="heading--1"/>
 
@@ -297,3 +298,10 @@ Figure 3.8: result of pressing the disengagement and the go home buttons.
 </h4>
 
 [go to top](#amr_pallet_trucks-project)
+
+<div id="heading--4"/>
+### 4. Design
+work in progress...
+<p align="center">
+<img src="docs/mechanical_workshop.png" width="700" />
+</p>
