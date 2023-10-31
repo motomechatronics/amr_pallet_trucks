@@ -302,17 +302,29 @@ Figure 3.8: result of pressing the disengagement and the go home buttons.
 <div id="heading--4"/>
     
 ### 4. Design
-work in progress...
+we are designing the real pallet truck. We will update you on the work in progress. The images below show you a simple implementation.
 
 <p align="center">
 <img src="docs/design_pallet_truck.png" width="700" />
 </p>
 
+<h4 align="center">
+Figure 4.1: main view of the pallet truck CAD with a fork up.
+</h4>
+
 <p align="center">
 <img src="docs/design_pallet_truck_2.png" width="700" />
 </p>
 
+<h4 align="center">
+Figure 4.2: view of the fork mechanism with the fork up.
+</h4>
+
 <p align="center">
 <img src="docs/design_pallet_truck_3.png" width="700" />
 </p>
+
+<h4 align="center">
+Figure 4.3: view of the fork mechanism with the fork down.
+</h4>
 [go to top](#amr_pallet_trucks-project)
