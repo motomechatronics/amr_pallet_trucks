@@ -143,3 +143,36 @@ table tr td {
 table tr td span {
   font-weight: bold;
 }
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-items {
+  display: flex;
+}
+
+.nav-item {
+  cursor: pointer;
+  font-size: large;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  width: 100px;
+}
+
+.nav-item:hover {
+  background-color: black;
+}
+
+.rosbridge-address {
+  display: flex;
+  gap: 15px;
+}
+
+.rosbridge-address input {
+  width: 100%;
+  padding: 8px;
+}

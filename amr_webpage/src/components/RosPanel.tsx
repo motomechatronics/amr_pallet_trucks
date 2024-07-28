@@ -19,7 +19,7 @@ export default function RosPanel({ ros }: RosPanelProps) {
   const [odometryLastMessage, setOdometryLastMessage] = useState({
     pose: { pose: { position: { x: 0, y: 0, z: 0 } } },
   });
-  const pingInterval = useRef<number>();
+  const pingInterval = useRef<NodeJS.Timeout>();
 
   const getYaw = useCallback((q: any) => {
     let angles = { roll: 0, pitch: 0, yaw: 0 };

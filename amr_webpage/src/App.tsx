@@ -1,89 +1,84 @@
-import { useCallback, useRef, useState } from "react";
+import { ReactNode, useCallback, useMemo, useRef, useState } from "react";
 import ROSLIB from "roslib";
 import { useSnackbar } from "notistack";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import RosPanel from "./components/RosPanel";
+import Map from "./components/map/Map";
 
-const DEFAULT_ROSBRIDGE =
-  "wss://i-00221d5d24e3c2c98.robotigniteacademy.com/5bb64df8-92fe-4dad-bc04-b076367e63f3/rosbridge/";
+export interface Route {
+  id: "controls" | "map";
+  name: string;
+  component: ReactNode;
+}
 
 function App() {
   const [connected, setConnected] = useState(false);
-  const [rosbridgeAddress, setRosbridgeAddress] = useState(DEFAULT_ROSBRIDGE);
+  const [route, setRoute] = useState<Route["id"]>("controls");
   const ros = useRef<ROSLIB.Ros>();
   const { enqueueSnackbar } = useSnackbar();
 
-  const onConnect = useCallback(() => {
-    try {
-      ros.current = new ROSLIB.Ros({
-        url: rosbridgeAddress,
-      });
-    } catch (error) {
-      return;
-    }
+  const ROUTES: Record<Route["id"], Route> = useMemo(
+    () => ({
+      controls: {
+        component: ros.current ? <RosPanel ros={ros.current} /> : null,
+        name: "Controls",
+        id: "controls",
+      },
+      map: {
+        component: ros.current ? <Map ros={ros.current} /> : null,
+        name: "Map",
+        id: "map",
+      },
+    }),
+    [ros.current]
+  );
 
-    ros.current.on("connection", () => {
-      enqueueSnackbar("Successfully connected to websocket server.");
-      setConnected(true);
-    });
-    ros.current.on("error", () => {
-      enqueueSnackbar("Error occurred connecting to websocket server: ", {
-        variant: "error",
+  const onConnect = useCallback(
+    (rosbridgeAddress: string) => {
+      try {
+        ros.current = new ROSLIB.Ros({
+          url: rosbridgeAddress,
+        });
+      } catch (error) {
+        return;
+      }
+
+      ros.current.on("connection", () => {
+        enqueueSnackbar("Successfully connected to websocket server.");
+        setConnected(true);
       });
-    });
-    ros.current.on("close", () => {
-      enqueueSnackbar("Connection to websocket server closed.", {
-        variant: "info",
+      ros.current.on("error", () => {
+        enqueueSnackbar("Error occurred connecting to websocket server", {
+          variant: "error",
+        });
       });
-      setConnected(false);
-    });
-  }, [enqueueSnackbar, rosbridgeAddress]);
+      ros.current.on("close", () => {
+        if (connected) {
+          enqueueSnackbar("Connection to websocket server closed.", {
+            variant: "info",
+          });
+        }
+        setConnected(false);
+      });
+    },
+    [enqueueSnackbar]
+  );
 
   return (
     <div id="container">
-      <Header />
+      <Header
+        connected={connected}
+        onConnect={onConnect}
+        onDisconnect={() => {
+          ros.current?.close();
+        }}
+        routes={Object.values(ROUTES)}
+        onRouteChange={setRoute}
+      />
 
       <div id="content">
-        {/* Menu */}
-        <div id="menu" className="column-30">
-          <div className="control">
-            <label>Rosbridge address</label>
-            <input
-              type="text"
-              disabled={connected}
-              onChange={(e) => {
-                setRosbridgeAddress(e.target.value);
-              }}
-              value={rosbridgeAddress}
-              id="rosbridge_address"
-            />
-          </div>
-          {!connected && (
-            <div className="control align-right">
-              <button
-                className="btn btn-success"
-                type="button"
-                onClick={onConnect}
-              >
-                Connect
-              </button>
-            </div>
-          )}
-          {connected && (
-            <div className="control align-right">
-              <button
-                className="btn btn-danger"
-                type="button"
-                onClick={ros.current?.close}
-              >
-                Disconnect
-              </button>
-            </div>
-          )}
-        </div>
-
-        {connected && ros.current && <RosPanel ros={ros.current} />}
+        {connected && ros.current && ROUTES[route].component}
 
         {/* Clear */}
         <div className="clear"></div>
