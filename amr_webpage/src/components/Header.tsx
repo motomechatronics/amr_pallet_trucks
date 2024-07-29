@@ -22,7 +22,6 @@ export default function Header({
   const [rosbridgeAddress, setRosbridgeAddress] = useState(
     DEFAULT_ROSBRIDGE_ADDRESS
   );
-  console.log(window.ROS2D);
 
   return (
     <div id="header" className="dark align-center">

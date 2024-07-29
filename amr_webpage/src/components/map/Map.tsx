@@ -12,12 +12,16 @@ export default function Map({ ros }: MapProps) {
         width: 750,
         height: 550,
       });
-      window.NAV2D.OccupancyGridClientNav({
+      const gridClient = new window.ROS2D.OccupancyGridClient({
         ros: ros,
         rootObject: ros2dViewer.scene,
-        viewer: ros2dViewer,
-        serverName: "/move_base",
-        topic: "/map",
+      });
+
+      gridClient.on("change", () => {
+        ros2dViewer.scaleToDimensions(
+          gridClient.currentGrid.width,
+          gridClient.currentGrid.height
+        );
       });
     } catch (error) {
       console.log("Nav error");
@@ -25,9 +29,5 @@ export default function Map({ ros }: MapProps) {
     }
   }, [ros]);
 
-  return (
-    <div id="map" className="dark align-center">
-      This is the map
-    </div>
-  );
+  return <div id="map" className="align-center"></div>;
 }
